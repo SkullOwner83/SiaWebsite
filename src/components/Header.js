@@ -1,21 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import ImgSiaLogo from '../images/sia-logo.svg';
 
 export const Header = () => {
-    let WebsiteName = "Servicios Informáticos de Aguascalientes";
-
+    const NavBar = ["INICIO", "SERVICIOS", "PRODUCTOS", "PRIVACIDAD", "CONTACTO", "SOPORTE"];
+    
   return (
     <div>
-        <header>
-            <h1></h1>
+        <header>          
+          <img src={ImgSiaLogo} className="Sia-Logo"/>
 
-            <ul>
-                <li>INICIO</li>
-                <li>SERVICIOS</li>
-                <li>PRODUCTOS</li>
-                <li>PRIVACIDAD</li>
-                <li>CONTACTO</li>
-                <li>SOPORTE</li>
+            {/* Get each element from NavBar array and add it in navigation list menu */}
+            <ul className="NavBar">
+                {
+                  NavBar.map(element => {
+                    return(<li key={element}>{element}</li>)
+                  })
+                }
             </ul>
+
+            <input id="Burger-Button" Type="checkbox"/>
         </header>
     </div>
   )

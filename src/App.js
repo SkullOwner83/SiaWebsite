@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/styles.scss";
 import { Header } from './components/Header';
+import { HomePage } from './components/HomePage';
 
 function App() {
+  const CurrentPage = "Home";
+  
   return (
     <div className="App">
       <Header/>
+      <div className="Header-Spacing"/>
+      <HomePage/>
     </div>
   );
 }
