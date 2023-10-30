@@ -1,0 +1,79 @@
+//Set header to a fixed position to always maintain on top
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-content: center;
+    
+    width: 100%;
+    height: $HeaderSize;
+    position: fixed;
+    padding: 0px 32px;
+
+    background-color: $Black;
+    z-index: 100;
+
+    //Logo and text styles
+    .Logo-Container {
+        grid-column: 1;
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 40px;
+        }
+
+        p {
+            color: $White;
+            font-size: 24px;
+            margin-left: 16px;
+        }
+    }
+
+    //Set flex distribution for items and separation
+    .NavBar {
+        grid-column: 2;
+        justify-content: right;
+        margin-right: 16px;
+
+
+        li {
+            color: gray;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 1s;
+        }
+        
+        li:hover {
+            color: white;
+            transition: 0s;
+        }
+        
+        li:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    //Hide or show search textbox when the button is clicked
+    .Search-Container {
+        grid-column: 3;
+       
+        .Search-TextBox {
+            display: none;
+        }
+
+        .Search-Icon {
+            height: 24px;         
+        }
+    }
+
+    //Hide navigation bar on small screen resolution
+    @media (width < $MediaMinWidth) {    
+        .NavBar {
+            display: none;
+        }
+
+        #Burger-Button {
+            display: inline;
+        }
+    }
+}

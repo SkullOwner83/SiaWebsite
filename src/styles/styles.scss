@@ -1,71 +1,8 @@
 @import "./settings";
 @import "./base";
+@import "./components/_header";
 @import "./components/_homepage";
 
 body {
     min-height: 1500px;
-}
-
-.Header-Spacing {
-    height: $HeaderSize;
-}
-
-.Sia-Logo {
-    grid-column: 1;
-    height: 100%;
-}
-
-//Set header to a fixed position to always maintain on top
-header {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    
-    width: 100%;
-    height: $HeaderSize;
-    position: fixed;
-    padding: 16px 32px;
-
-    background-color: $Black;
-    z-index: 100;
-
-    //Set flex distribution for items and separation
-    .NavBar {
-        grid-column: 2;
-        display: flex;
-        justify-content: right;
-        align-items: center;
-
-        li {
-            color: gray;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 1s;
-        }
-        
-        li:hover {
-            color: white;
-            transition: 0s;
-        }
-        
-        li:not(:last-child) {
-            margin-right: 16px;
-        }
-    }
-    
-    //Hide burger menu button when itps no necesary
-    #Burger-Button {
-        grid-column: 3;
-        display: none;
-    }
-
-    //Hide navigation bar on small screen resolution
-    @media (width < $MediaMinWidth) {    
-        .NavBar {
-            display: none;
-        }
-
-        #Burger-Button {
-            display: inline;
-        }
-    }
 }
