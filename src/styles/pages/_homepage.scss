@@ -1,0 +1,42 @@
+//Home page component styles
+.Home-Page
+{
+    .HomeImage-Container {
+        width: 100%;
+        height: calc(100vh - $HeaderSize);
+        background-image: url("../../images/home-image.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+        .Background-Black {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background-color: black;
+            opacity: 0.3;
+        }
+
+        p {
+            font-size: 48px;
+            font-weight: bold;
+            color: $White;
+            z-index: 10;
+        }
+
+        button {
+            z-index: 10;
+        }
+
+        @media (width < $MediaMinWidth) {
+            p {
+                font-size: 38px;
+            }
+        }
+    }
+
+    .PageBody-Container {
+        max-width: 1280px;
+        margin: 64px 5%;
+    }
+}
