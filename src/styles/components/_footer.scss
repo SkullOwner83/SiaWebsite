@@ -1,0 +1,46 @@
+footer {
+    display: grid;
+    grid-column: repeat(1fr, 3);
+    grid-row: repeat(1fr, 2);
+    background-color: $Black;
+
+    p {
+        color: gray;
+        margin: 0;
+    }
+    
+    section {
+        padding: 32px;
+        margin: 0;
+        // border: 1px solid red;
+    }
+
+    :last-child {
+        padding-top: 0;
+    }
+
+    .Footer-Atention {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .Footer-Navigation {
+        grid-column: 2;
+        grid-row: 1;    
+    }
+
+    .Footer-About {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .Footer-Copyright {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+        margin: 0 auto;
+
+        p {
+            color: $White;
+        }
+    }
+}

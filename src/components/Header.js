@@ -3,7 +3,7 @@ import ImgSiaLogo from '../images/sia-logo.svg';
 import ImgSearch from '../images/search-icon.svg';
 
 export const Header = () => {
-    const NavBar = ["INICIO", "SERVICIOS", "PRODUCTOS", "PRIVACIDAD", "CONTACTO", "SOPORTE"];
+    const NavBar = ["INICIO", "SERVICIOS", "PRODUCTOS", "NOSOTROS", "CONTACTO"];
     
   return (
     <div>
@@ -15,7 +15,7 @@ export const Header = () => {
           </div>
 
             {/* Get each element from NavBar array and add it in navigation list menu */}
-            <ul className="NavBar Centered-Container">
+            <ul className="Navbar-Container Links-Styles Centered-Container">
                 {
                   NavBar.map(element => {
                     return(<li key={element}>{element}</li>)

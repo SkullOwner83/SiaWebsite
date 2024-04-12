@@ -12,7 +12,7 @@ header {
     background-color: $Black;
     z-index: 100;
 
-    //Logo and text styles
+    //Logo of website styles
     .Logo-Container {
         grid-column: 1;
         display: flex;
@@ -23,22 +23,25 @@ header {
         }
 
         p {
+            height: 100%;
             color: $White;
             font-size: 24px;
+            margin: 0 auto;
             margin-left: 16px;
+            user-select: none;
         }
     }
 
-    //Set flex distribution for items and separation
-    .NavBar {
+    //Set flex distribution for menu items and its separation
+    .Navbar-Container {
         grid-column: 2;
         justify-content: right;
         margin-right: 16px;
-
-
+        
         li {
             color: gray;
             font-weight: bold;
+            user-select: none;
             cursor: pointer;
             transition: 1s;
         }
@@ -63,6 +66,9 @@ header {
 
         .Search-Icon {
             height: 24px;         
+            transform: translateY(2px);
+            user-select: none;
+            cursor: pointer;
         }
     }
 

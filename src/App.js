@@ -1,5 +1,6 @@
 import "./styles/styles.scss";
 import { Header } from './components/Header';
+import { Footer } from './components/Footer'
 import { HomePage } from './pages/HomePage';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Header/>
       <div className="Header-Spacing"/>
       <HomePage/>
+      <Footer/>
     </div>
   );
 }

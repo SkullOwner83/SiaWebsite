@@ -4,6 +4,13 @@ h1, h2 {
     margin-bottom: 1rem;
 }   
 
+.Centered-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 section {
     margin-bottom: 5rem;
 
@@ -35,6 +42,23 @@ button {
     }
 }
 
+//Links with fading styles
+.Links-Styles {
+    li {
+        color: gray;
+        font-weight: bold;
+        user-select: none;
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    li:hover {
+        color: white;
+        transition: 0s;
+    }
+}
+
+//Cards styles
 .Cards-Container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -42,17 +66,37 @@ button {
     gap: 30px;
     
     div {
-        height: 300px;
+        position: relative;
+        height: auto;
         background-color: $White;
         text-align: center;
         border-radius: 10px;
-        padding: 32px;
+        padding: 28px;
+        padding-top: 40px;
         box-shadow: 0 0 30px $Shadow;
         transition: 0.3s;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
             transform: translateY(-20px);
             transition: 0.3s;
         }
     }
+
+    .Cards-Icon {
+        display: block;
+        position: absolute;
+        background-color: orange;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        top: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.Header-Spacing {
+    height: $HeaderSize;
 }
