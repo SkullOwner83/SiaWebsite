@@ -1,45 +1,36 @@
 import React from 'react'
 import { useEffect } from 'react';
 
-export const HomePage = () => {
+export const Home = () => {
   //Background image parallax effecto when scrolling
   useEffect(() => {
     const handleScroll = () => {
-      const ImageContainer = document.querySelector('.HomeImage-Container');
+      const ImageContainer = document.querySelector('.Banner-Container');
       const ScrollPosition = window.scrollY;
       const ScrollVelocity = 0.5;
-
+  
       //Adjust the background position to create the parallax effect
       ImageContainer.style.backgroundPosition = `center ${-ScrollPosition * ScrollVelocity}px`;
     };
-
+  
     window.addEventListener('scroll', handleScroll);
-
+  
     return () => {
       window.removeEventListener('scroll', handleScroll);
-    };
+    }
   }, []);
 
   //HTML section
   return (
     <div className="Home-Page">          
       {/* Main banner container */}
-      <div className="HomeImage-Container Centered-Container">
+      <div className="Banner-Container Centered-Container">
         <div className="Background-Black"/>
         <button>Contactanos ahora</button>
       </div>
 
       {/* Page body container */}
-      <main>
-        {/* About us section */}
-        <section>
-          <h1>¿Quiénes somos?</h1>
-          <article>
-            <p>Servicios Informáticos de Aguascalientes, es una empresa dedicada a la venta y reparación de equipos de cómputo desde 1999, ofreciendo servicios de mejora de rendimiento, mantenimiento preventivo y correctivo, tanto a equipos de escritorio, como portátiles, además de la instalación y configuración de software imprescindible para el trabajo diario.</p>
-            <p>Brindamos soluciones informáticas integrales y de calidad, basadas en más de dos décadas de experiencia, para potenciar la productividad y eficiencia de nuestros clientes. Nuestro compromiso es ofrecer servicios de venta, reparación, mantenimiento y configuración de equipos de cómputo y sistemas, respaldados por un equipo experto y una pasión por la innovación tecnológica.</p>
-          </article>
-        </section>
-  
+      <main>  
         {/* Info cards section */}
         <section>
           <div className="Cards-Container">

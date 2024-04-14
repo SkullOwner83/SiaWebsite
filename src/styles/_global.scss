@@ -1,19 +1,30 @@
 main {
     min-height: calc(100vh - $HeaderSize);
-}
+    max-width: 1280px;
+    margin: 64px 10%;
+} 
 
-h1, h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-}   
-
+//Class to center elements in the container
 .Centered-Container {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
+//Class to fit the image to the banner container
+.Banner-Container {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}  
 
 section {
     margin-bottom: 5rem;
@@ -46,31 +57,39 @@ button {
     }
 }
 
-//Cards styles
+//Class for a card container with responsive grid layout and even spacing
 .Cards-Container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-flow: dense;
     gap: 30px;
     
-    div {
-        position: relative;
-        height: auto;
-        background-color: $White;
-        text-align: center;
-        border-radius: 10px;
-        padding: 28px;
-        padding-top: 40px;
-        box-shadow: 0 0 30px $Shadow;
-        transition: 0.3s;
-        align-items: center;
-        justify-content: center;
-
-        &:hover {
-            transform: translateY(-20px);
+    &.Simple-Cards {
+        div {
+            position: relative;
+            height: auto;
+            background-color: $White;
+            text-align: center;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 30px $Shadow;
             transition: 0.3s;
+            align-items: center;
+            justify-content: center;
+    
+            &:hover {
+                transform: translateY(-20px);
+                transition: 0.3s;
+            }
+    
+            .Title {
+                font-size: 2rem;
+            }
         }
     }
+
+
+
 
     .Cards-Icon {
         display: block;

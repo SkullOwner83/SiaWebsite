@@ -1,0 +1,47 @@
+.AboutUs-Page {
+    .Banner-Container {
+        height: 50vh;
+        background-image: url("../../images/aboutus-image.jpg");
+        background-position-y: -290px;
+        background-attachment: scroll;
+
+        p {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            user-select: none;
+        }
+    }
+
+    section {
+        .Title {
+            font-size: 1.5rem;
+        }
+    }
+
+    .Values {
+        margin-top: 64px;
+
+        .Cards-Container {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                img {
+                    width: 98px;
+                }
+            }        
+        }
+    }
+
+    iframe {
+        width: 100%;
+        height: 500px;
+        border-style: none;
+        border-radius: 20px;
+    }
+}
