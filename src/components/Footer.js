@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
   return (
       <footer>
-          <section className="Footer-Atention">
+          <section className="Footer-Contact">
             <p>449 526 8740 | 449 915 6234</p>
             <p>Wahtsapp: 449 367 4547</p>
             <p>info@serviciosinformaticosdeags.com</p>

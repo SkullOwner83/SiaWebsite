@@ -1,25 +1,26 @@
+//Create a grid with three colums to information and one row to copyright
 footer {
     display: grid;
     grid-column: repeat(1fr, 3);
     grid-row: repeat(1fr, 2);
     background-color: $Black;
-
-    p {
-        color: gray;
-        margin: 0;
-    }
-    
+        
     section {
         padding: 32px;
         margin: 0;
-        // border: 1px solid red;
+
+        p {
+            color: gray;
+            margin: 0;
+        }
     }
 
-    :last-child {
+    &:last-child {
         padding-top: 0;
     }
 
-    .Footer-Atention {
+    //Assign the different sections to the corresponding grid space
+    .Footer-Contact {
         grid-column: 1;
         grid-row: 1;
     }
@@ -40,7 +41,7 @@ footer {
         margin: 0 auto;
 
         p {
-            color: $White;
+            color: white;
         }
     }
 }

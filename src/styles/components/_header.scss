@@ -39,20 +39,22 @@ header {
         margin-right: 16px;
         
         li {
-            color: gray;
-            font-weight: bold;
-            user-select: none;
-            cursor: pointer;
-            transition: 1s;
-        }
-        
-        li:hover {
-            color: white;
-            transition: 0s;
-        }
-        
-        li:not(:last-child) {
-            margin-right: 16px;
+            .Link {
+                color: gray;
+                font-weight: bold;
+                user-select: none;
+                cursor: pointer;
+                transition: 1s;
+            }
+            
+            .Link:hover {
+                color: white;
+                transition: 0s;
+            }        
+
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
         }
     }
 
