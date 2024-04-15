@@ -3,7 +3,23 @@ $White: #FBFBFB;
 $DryWhite: #d8d8d8;
 $Black: #1a1a1a;
 $Shadow: rgba(0, 0, 0, 0.3);
+$PrimaryColor: rgb(52, 97, 181);
+$OnPrimaryColor: rgb(83, 121, 190);
 
 //Size variables
+$FontSize: 1.3rem;
 $HeaderSize: 70px;
 $MediaMinWidth: 780px;
+$MinBorderRadius: 8px;
+$MaxBorderRadius: 24px;
+
+//Debug mode to show the container borders
+$DebugBorders: false;
+
+@mixin DebugBorders($Color: red) {
+  @if $DebugBorders {
+    border: 1px solid $Color;
+  } @else {
+    border: none;
+  }
+}

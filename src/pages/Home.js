@@ -1,5 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import ImgComputers from '../images/Computers.jpg';
+import ImgSoftware from '../images/Software.jpg';
+import ImgServers from '../images/Servers.jpg';
+import ImgNetworks from '../images/Networks.jpg';
 
 export const Home = () => {
   //Background image parallax effecto when scrolling
@@ -25,18 +30,69 @@ export const Home = () => {
     <div className="Home-Page">          
       {/* Main banner container */}
       <div className="Banner-Container Centered-Container">
-        <div className="Background-Black"/>
-        <button>Contactanos ahora</button>
+        <div className="Background-Black"/>      
+          <button>Contactanos ahora</button>
       </div>
 
-      {/* Page body container */}
       <main>  
+        {/* Cards of the services that we offer */}
+        <section className="Services">
+          <h1>¿Qué servicios ofrecemos?</h1>
+
+          <div class="Cards-Container">
+            <div className="Card">
+              <img src={ImgComputers}/>
+              <p>Computadoras</p>
+            </div>
+
+            <div className="Card">
+              <img src={ImgSoftware}/>
+              <p>Software</p>
+            </div>
+            
+            <div className="Card">
+              <img src={ImgServers}/>
+              <p>Servidores</p>
+            </div>
+
+            <div className="Card">
+              <img src={ImgNetworks}/>
+              <p>Redes</p>
+            </div>
+          </div>
+        </section>
+
+        <div className="Background">
+            <section>
+              <h2>¿Por qué elegirnos?</h2>
+              <p>Nos esforzamos por brindar soluciones de la más alta calidad, respaldadas por conocimientos técnicos sólidos y experiencia demostrada. Además, abrazamos la innovación y adoptamos las últimas tecnologías para ofrecer soluciones avanzadas que impulsen el éxito de nuestros clientes.</p>
+
+              <div className="Cards-Container">
+                <div>
+                  <p>Experiencia</p>
+                </div>
+
+                <div>
+                  <p>Reparaciones</p>
+                </div>
+
+                <div>
+                  <p>Clientes</p>
+                </div>
+
+                <div>
+                  <p>Horas</p>
+                </div>
+              </div>
+            </section>
+        </div>
+
         {/* Info cards section */}
-        <section>
+        {/* <section>
           <div className="Cards-Container">
             <div>
               <span className="Cards-Icon"/>
-              <p>Nos esforzamos por brindar soluciones de la más alta calidad, respaldadas por conocimientos técnicos sólidos y experiencia demostrada.</p>
+              <p></p>
             </div>
 
             <div>
@@ -46,7 +102,7 @@ export const Home = () => {
 
             <div>
               <span className="Cards-Icon"/>
-              <p>Abrazamos la innovación y adoptamos las últimas tecnologías para ofrecer soluciones avanzadas que impulsen el éxito de nuestros clientes.</p>
+              <p>.</p>
             </div>
 
             <div>
@@ -54,16 +110,7 @@ export const Home = () => {
               <p>Nos mantenemos en constante aprendizaje y desarrollo para estar al tanto de las últimas tendencias y mejores prácticas en tecnología informática.</p>
             </div>
           </div>
-        </section>
-
-        <section>
-          <h2>¿Qué servicios ofrecemos?</h2>
-
-          <p>Ensamblamiento de equipos</p>
-          <p>Instalación de software</p>
-          <p>Servidores</p>
-          <p>Redes</p>
-        </section>
+        </section> */}
       </main>
     </div>
   )
