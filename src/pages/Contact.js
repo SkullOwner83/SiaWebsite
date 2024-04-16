@@ -28,7 +28,7 @@ export const Contact = () => {
           <label for="Problem">Describenos tu problema</label>
           <input type="text" id="Problem"/>
 
-          <input type="submit"/>
+          <input type="submit" className="Convencional-Button"/>
         </form>
       </section>
     </main>

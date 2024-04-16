@@ -31,7 +31,7 @@ export const Home = () => {
       {/* Main banner container */}
       <div className="Banner-Container Centered-Container">
         <div className="Background-Black"/>      
-          <button>Contactanos ahora</button>
+          <button className="Keyboard-Button">Contactanos ahora</button>
       </div>
 
       <main>  
@@ -41,27 +41,65 @@ export const Home = () => {
 
           <div class="Cards-Container">
             <div className="Card">
+              <div className="Centered-Container">
+                <p>Cómputo</p>
+                <ul>
+                  <li>Ensamble de equipos</li>
+                  <li>Cambio de componentes</li>
+                  <li>Venta de equipos</li>
+                  <li>Mantenimiento</li>
+                  <li>Reparación</li>
+                </ul>
+                <button className="Convencional-Button">ver más</button>
+              </div>
               <img src={ImgComputers}/>
-              <p>Computadoras</p>
             </div>
 
             <div className="Card">
+              <div className="Centered-Container">
+                <p>Software</p>
+                <ul>
+                  <li>Instalacion de programas</li>
+                  <li>Optimizacion de sistema</li>
+                  <li>Respaldo de información</li>
+                  <li>Actualizaciones</li>
+                </ul>
+                <button className="Convencional-Button">ver más</button>
+              </div>
               <img src={ImgSoftware}/>
-              <p>Software</p>
             </div>
             
             <div className="Card">
+              <div className="Centered-Container">
+                <p>Servidores</p>
+                <ul>
+                  <li>Instalación de servidores</li>
+                  <li>Administracion de datos</li>
+                  <li>Migración y actualización</li>
+                  <li>Virtualización</li>
+                </ul>
+                <button className="Convencional-Button">ver más</button>
+              </div>
               <img src={ImgServers}/>
-              <p>Servidores</p>
             </div>
 
             <div className="Card">
+              <div className="Centered-Container">
+                <p>Redes</p>
+                <ul>
+                  <li>Diseño de la red</li>
+                  <li>Configuracion de routers</li>
+                  <li>Seguridad de redes</li>
+                  <li>Auditoria y analisis</li>
+                </ul>
+                <button className="Convencional-Button">ver más</button>
+              </div>
               <img src={ImgNetworks}/>
-              <p>Redes</p>
             </div>
           </div>
         </section>
 
+        {/* Why choose us section */}
         <div className="Background">
             <section>
               <h2>¿Por qué elegirnos?</h2>

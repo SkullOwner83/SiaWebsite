@@ -8,8 +8,19 @@ import { Services } from './pages/Services';
 import { Products } from './pages/Products';
 import { Contact } from './pages/Contact';
 import { NoPage } from './pages/NoPage';
+import { useEffect, useState } from "react";
 
 function App() {
+  const [CurrentPage, SetCurrentPage] = useState("Home");
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [CurrentPage]);
+
+  const handleLinkClick = () => {
+    SetCurrentPage(window.location.pathname);
+  };
+
   return (
     <div className="App"> 
       <BrowserRouter>
