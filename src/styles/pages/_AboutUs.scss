@@ -20,22 +20,6 @@
 
         .Values {
             margin-top: 64px;
-    
-            .Cards-Container {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        
-                div{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    user-select: none;
-        
-                    img {
-                        width: 98px;
-                    }
-                }        
-            }
         }
 
         iframe {

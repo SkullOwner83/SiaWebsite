@@ -5,6 +5,10 @@ import ImgComputers from '../images/Computers.jpg';
 import ImgSoftware from '../images/Software.jpg';
 import ImgServers from '../images/Servers.jpg';
 import ImgNetworks from '../images/Networks.jpg';
+import ImgExperience from '../images/Home/Experience.svg';
+import ImgClients from '../images/Home/Clients.svg';
+import ImgRepairs from '../images/Home/Repairs.svg';
+import ImgHours from '../images/Home/Hours.svg';
 
 export const Home = () => {
   //Background image parallax effecto when scrolling
@@ -39,7 +43,7 @@ export const Home = () => {
         <section className="Services">
           <h1>¿Qué servicios ofrecemos?</h1>
 
-          <div class="Cards-Container">
+          <div class="Grid-Gallery">
             <div className="Card">
               <div className="Centered-Container">
                 <p>Cómputo</p>
@@ -87,7 +91,7 @@ export const Home = () => {
               <div className="Centered-Container">
                 <p>Redes</p>
                 <ul>
-                  <li>Diseño de la red</li>
+                  <li>Diseño de infraestructura</li>
                   <li>Configuracion de routers</li>
                   <li>Seguridad de redes</li>
                   <li>Auditoria y analisis</li>
@@ -101,54 +105,37 @@ export const Home = () => {
 
         {/* Why choose us section */}
         <div className="Background">
-            <section>
+            <section className="WhyChooseUs">
               <h2>¿Por qué elegirnos?</h2>
               <p>Nos esforzamos por brindar soluciones de la más alta calidad, respaldadas por conocimientos técnicos sólidos y experiencia demostrada. Además, abrazamos la innovación y adoptamos las últimas tecnologías para ofrecer soluciones avanzadas que impulsen el éxito de nuestros clientes.</p>
 
-              <div className="Cards-Container">
+              <div className="Grid-Gallery Graphics">
                 <div>
+                  <img src={ImgExperience}/>
+                  <p className="Title">+20 años</p>
                   <p>Experiencia</p>
                 </div>
 
                 <div>
-                  <p>Reparaciones</p>
+                  <img src={ImgRepairs}/>
+                  <p className="Title">+1,000</p>
+                  <p>Reparaciones realizadas</p>
                 </div>
 
                 <div>
-                  <p>Clientes</p>
+                  <img src={ImgClients}/>
+                  <p className="Title">+3000</p>
+                  <p>Clientes satisfechos</p>
                 </div>
 
                 <div>
-                  <p>Horas</p>
+                  <img src={ImgHours}/>
+                  <p className="Title">+10,000</p>
+                  <p>Horas de servicio</p>
                 </div>
               </div>
             </section>
         </div>
-
-        {/* Info cards section */}
-        {/* <section>
-          <div className="Cards-Container">
-            <div>
-              <span className="Cards-Icon"/>
-              <p></p>
-            </div>
-
-            <div>
-              <span className="Cards-Icon"/>
-              <p>Ponemos las necesidades de nuestros clientes en el centro de todo. Escuchamos y comprendemos para superar sus expectativas.</p>
-            </div>
-
-            <div>
-              <span className="Cards-Icon"/>
-              <p>.</p>
-            </div>
-
-            <div>
-              <span className="Cards-Icon"/>
-              <p>Nos mantenemos en constante aprendizaje y desarrollo para estar al tanto de las últimas tendencias y mejores prácticas en tecnología informática.</p>
-            </div>
-          </div>
-        </section> */}
       </main>
     </div>
   )

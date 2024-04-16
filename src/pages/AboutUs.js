@@ -24,7 +24,7 @@ export const AboutUs = () => {
         {/* Business identity section */}
         <section>
           {/* Mission and vision */}
-          <div class="Cards-Container Simple-Cards">
+          <div class="Grid-Gallery Cards">
             <div>
               <p className="Title">Misión</p>
               <p>Brindamos soluciones informáticas integrales y de calidad para potenciar la productividad y eficiencia de nuestros clientes.</p>
@@ -42,7 +42,7 @@ export const AboutUs = () => {
               <h2>Valores</h2>
             </div>
 
-            <div className="Cards-Container">
+            <div className="Grid-Gallery Graphics">
               <div>
                 <img src={ImgCommitment}/>
                 <p>Compromiso</p>

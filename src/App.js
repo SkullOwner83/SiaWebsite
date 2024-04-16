@@ -15,11 +15,7 @@ function App() {
 
   useEffect(() => {
     window.scroll(0, 0);
-  }, [CurrentPage]);
-
-  const handleLinkClick = () => {
-    SetCurrentPage(window.location.pathname);
-  };
+  }, []);
 
   return (
     <div className="App"> 
