@@ -1,14 +1,15 @@
-import "./styles/styles.scss";
+import "./Styles/styles.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Header } from './components/Header';
-import { Footer } from './components/Footer'
-import { Home } from './pages/Home';
-import { AboutUs } from './pages/AboutUs';
-import { Services } from './pages/Services';
-import { Products } from './pages/Products';
-import { Contact } from './pages/Contact';
-import { NoPage } from './pages/NoPage';
 import { useEffect, useState } from "react";
+
+import { Header } from "./Components/Header";
+import { Footer } from "./Components/Footer";
+import { Home } from "./Pages/Home";
+import { AboutUs } from "./Pages/AboutUs";
+import { Services } from "./Pages/Services";
+import { Products } from "./Pages/Products";
+import { Contact } from "./Pages/Contact";
+import { NoPage } from "./Pages/NoPage";
 
 function App() {
   const [CurrentPage, SetCurrentPage] = useState("Home");

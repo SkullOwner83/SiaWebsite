@@ -1,10 +1,11 @@
-import React from 'react'
-import ImgCommitment from '../images/Commitment.svg'
-import ImgResponsability from '../images/Responsability.svg'
-import ImgIntegrity from '../images/Integrity.svg'
-import ImgInnovation from '../images/Innovation.svg'
+import React from "react";
+import ImgCommitment from "../Images/Commitment.svg";
+import ImgResponsability from "../Images/Responsability.svg";
+import ImgIntegrity from "../Images/Integrity.svg";
+import ImgInnovation from "../Images/Innovation.svg";
 
 export const AboutUs = () => {
+  //HTML section
   return (
     <div className="AboutUs-Page">
       <div className="Banner-Container Centered-Container">

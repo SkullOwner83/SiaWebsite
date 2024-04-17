@@ -1,14 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
-import ImgComputers from '../images/Computers.jpg';
-import ImgSoftware from '../images/Software.jpg';
-import ImgServers from '../images/Servers.jpg';
-import ImgNetworks from '../images/Networks.jpg';
-import ImgExperience from '../images/Home/Experience.svg';
-import ImgClients from '../images/Home/Clients.svg';
-import ImgRepairs from '../images/Home/Repairs.svg';
-import ImgHours from '../images/Home/Hours.svg';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import ImgComputers from "../Images/Computers.jpg";
+import ImgSoftware from "../Images/Software.jpg";
+import ImgServers from "../Images/Servers.jpg";
+import ImgNetworks from "../Images/Networks.jpg";
+import ImgExperience from "../Images/Home/Experience.svg";
+import ImgClients from "../Images/Home/Clients.svg";
+import ImgRepairs from "../Images/Home/Repairs.svg";
+import ImgHours from "../Images/Home/Hours.svg";
+
+import ImgCiasa from "../Images/Enterprises/Ciasa.png";
+import ImgMatute from "../Images/Enterprises/Matute.png";
+import ImgPassport from "../Images/Enterprises/Passport.png";
+import ImgAgroestime from '../Images/Enterprises/Àgroestime.png';
+import ImgEcoSolution from "../Images/Enterprises/Eco Solution.png";
+import ImgMartinezCano from "../Images/Enterprises/Martinez Cano.png";
+import ImgATIndustrial from "../Images/Enterprises/AT Industrial.png";
+import ImgNagoya from "../Images/Enterprises/Nagoya.png";
+import ImgVGA from "../Images/Enterprises/VGA.png";
 
 export const Home = () => {
   //Background image parallax effecto when scrolling
@@ -34,15 +44,18 @@ export const Home = () => {
     <div className="Home-Page">          
       {/* Main banner container */}
       <div className="Banner-Container Centered-Container">
-        <div className="Background-Black"/>      
-          <button className="Keyboard-Button">Contactanos ahora</button>
+        <button className="Convencional-Button">Contactanos</button>
+        <div>
+          <p>Nuestro trabajo es ayudar a brindar servicios de calidad.</p>
+          {/* <p>Técnicos certificados para la resolución de requerimientos en soporte técnico.</p> */}
+          {/* <p>¡Somos tu mejor aliado tecnológico!</p> */}
+        </div>
       </div>
 
       <main>  
         {/* Cards of the services that we offer */}
         <section className="Services">
           <h1>¿Qué servicios ofrecemos?</h1>
-
           <div class="Grid-Gallery">
             <div className="Card">
               <div className="Centered-Container">
@@ -136,6 +149,24 @@ export const Home = () => {
               </div>
             </section>
         </div>
+
+        {/* Our clients section */}
+        <section className="OurClients">
+          <h3>Nuestros clientes</h3>
+          {/* <p>Varias empresas y negocios del estado de aguascalientes, confian en nosotros.</p> */}
+
+          <div class="Grid-Gallery Graphics">     
+            <div><img src={ImgEcoSolution}/></div>     
+            <div><img src={ImgAgroestime}/></div>     
+            <div><img src={ImgCiasa}/></div>     
+            <div><img src={ImgMatute}/></div>     
+            <div><img src={ImgPassport}/></div>     
+            <div><img src={ImgMartinezCano}/></div>
+            <div><img src={ImgATIndustrial}/></div>
+            <div><img src={ImgNagoya}/></div>
+            <div><img src={ImgVGA}/></div>
+          </div>
+        </section>
       </main>
     </div>
   )

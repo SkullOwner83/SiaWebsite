@@ -18,13 +18,13 @@ main {
         p {
             font-size: 1.3rem;
         }
-
-        &>p {
-            margin-bottom: 1rem;
-        }
     
         article {
             text-align: justify;
+
+            p:not(:last-child) {
+                margin-bottom: 1rem;
+            }
         }
     }
 } 
@@ -81,6 +81,13 @@ main {
     border-radius: $MinBorderRadius;
     border-style: none;
     cursor: pointer;
+    transition: 0.2s;
+
+
+    &:hover {
+        transform: scale(0.9);
+        transition: 0.2s;
+    }
 }
 
 //Class for a set of elements container with responsive grid layout and even spacing
@@ -109,10 +116,6 @@ main {
                 transform: translateY(-20px);
                 transition: 0.3s;
             }
-    
-            .Title {
-                font-size: 2rem;
-            }
         }
     }
     
@@ -128,15 +131,16 @@ main {
             user-select: none;
 
             img {
-                width: 98px;
+                width: 100px;
                 margin-bottom: 16px;
-            }
-
-            .Title {
-                font-size: 1.5rem;
-                font-weight: bold;
+                pointer-events: none;
             }
         }
+    }
+
+    .Title {
+        font-size: 1.8rem;
+        font-weight: bold;
     }
 
     div {

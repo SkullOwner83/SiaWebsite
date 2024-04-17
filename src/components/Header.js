@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { Link, BrowserRouter } from 'react-router-dom'
-import ImgSiaLogo from '../images/sia-logo.svg';
-import ImgSearch from '../images/search-icon.svg';
+import React, { useEffect } from "react";
+import { Link, BrowserRouter } from "react-router-dom";
+import ImgSiaLogo from "../Images/sia-logo.svg";
+import ImgSearch from "../Images/search-icon.svg";
 
 export const Header = () => {
     const NavbarLinks = ["INICIO", "SERVICIOS", "PRODUCTOS", "NOSOTROS", "CONTACTO"];
