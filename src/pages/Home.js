@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { BannerSlider } from "../Components/Slider";
+
 import ImgComputers from "../Images/Computers.jpg";
 import ImgSoftware from "../Images/Software.jpg";
 import ImgServers from "../Images/Servers.jpg";
@@ -19,8 +21,15 @@ import ImgMartinezCano from "../Images/Enterprises/Martinez Cano.png";
 import ImgATIndustrial from "../Images/Enterprises/AT Industrial.png";
 import ImgNagoya from "../Images/Enterprises/Nagoya.png";
 import ImgVGA from "../Images/Enterprises/VGA.png";
+import ImgAminsa from "../Images/Enterprises/Aminsa.png"
 
 export const Home = () => {
+  const SliderItems = [
+    <p>Nuestro trabajo es ayudar a brindar servicios de calidad.</p>,
+    <p>Técnicos certificados para la resolución de requerimientos en soporte técnico.</p>,
+    <p>¡Somos tu mejor aliado tecnológico!</p>,
+  ]
+
   //Background image parallax effecto when scrolling
   useEffect(() => {
     const handleScroll = () => {
@@ -44,20 +53,16 @@ export const Home = () => {
     <div className="Home-Page">          
       {/* Main banner container */}
       <div className="Banner-Container Centered-Container">
-        <button className="Convencional-Button">Contactanos</button>
-        <div>
-          <p>Nuestro trabajo es ayudar a brindar servicios de calidad.</p>
-          {/* <p>Técnicos certificados para la resolución de requerimientos en soporte técnico.</p> */}
-          {/* <p>¡Somos tu mejor aliado tecnológico!</p> */}
-        </div>
+        <Link className="Convencional-Button" to="/contacto">Contactanos</Link>
+        <BannerSlider List={SliderItems}/>
       </div>
 
       <main>  
         {/* Cards of the services that we offer */}
         <section className="Services">
           <h1>¿Qué servicios ofrecemos?</h1>
-          <div class="Grid-Gallery">
-            <div className="Card">
+          <div class="Grid-Gallery Card">
+            <div>
               <div className="Centered-Container">
                 <p>Cómputo</p>
                 <ul>
@@ -67,12 +72,12 @@ export const Home = () => {
                   <li>Mantenimiento</li>
                   <li>Reparación</li>
                 </ul>
-                <button className="Convencional-Button">ver más</button>
+                <Link className="Convencional-Button" to="/servicios">ver más</Link>
               </div>
               <img src={ImgComputers}/>
             </div>
 
-            <div className="Card">
+            <div>
               <div className="Centered-Container">
                 <p>Software</p>
                 <ul>
@@ -86,7 +91,7 @@ export const Home = () => {
               <img src={ImgSoftware}/>
             </div>
             
-            <div className="Card">
+            <div>
               <div className="Centered-Container">
                 <p>Servidores</p>
                 <ul>
@@ -100,7 +105,7 @@ export const Home = () => {
               <img src={ImgServers}/>
             </div>
 
-            <div className="Card">
+            <div>
               <div className="Centered-Container">
                 <p>Redes</p>
                 <ul>
@@ -165,6 +170,7 @@ export const Home = () => {
             <div><img src={ImgATIndustrial}/></div>
             <div><img src={ImgNagoya}/></div>
             <div><img src={ImgVGA}/></div>
+            <div><img src={ImgAminsa}/></div>
           </div>
         </section>
       </main>
