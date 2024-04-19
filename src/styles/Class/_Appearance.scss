@@ -1,0 +1,28 @@
+//Styles to convencional buttons
+.Convencional-Button {
+    font-size: $FontSize;
+    color: $White;
+    background-color: $PrimaryColor;
+    
+    margin: 32px 0px;
+    padding: 8px;
+    border-radius: $MinRadius;
+    border-style: none;
+
+    user-select: none;
+    cursor: pointer;
+    @include Fx-Compact();
+}
+
+.Card-Style {
+    background-color: $White;
+    box-shadow: 0 0 30px $Shadow;
+    border-radius: $MaxRadius;
+    padding: 48px;
+}
+
+.Solid-Background {
+    width: 100%;
+    background-color: whitesmoke;
+    padding: $SectionSeparation 0;
+}

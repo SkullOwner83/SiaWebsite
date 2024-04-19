@@ -1,13 +1,13 @@
-import "./Styles/styles.scss";
+import "./Styles/Styles.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { Header } from "./Components/Header";
 import { Footer } from "./Components/Footer";
 import { Home } from "./Pages/Home";
-import { AboutUs } from "./Pages/AboutUs";
 import { Services } from "./Pages/Services";
 import { Products } from "./Pages/Products";
+import { AboutUs } from "./Pages/AboutUs";
 import { Contact } from "./Pages/Contact";
 import { NoPage } from "./Pages/NoPage";
 
@@ -15,8 +15,8 @@ function App() {
   const [CurrentPage, SetCurrentPage] = useState("Home");
 
   useEffect(() => {
-    window.scroll(0, 0);
-  }, []);
+    console.log(CurrentPage);
+  }, [CurrentPage]);
 
   return (
     <div className="App"> 

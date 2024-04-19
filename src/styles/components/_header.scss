@@ -17,26 +17,19 @@ header {
         grid-column: 1;
         display: flex;
         align-items: center;
+        @include DebugBorders(green);
 
         img {
             height: 40px;
         }
-
-        p {
-            height: 100%;
-            color: $White;
-            font-size: 24px;
-            margin: 0 auto;
-            margin-left: 16px;
-            user-select: none;
-        }
     }
 
-    //Set flex distribution for menu items and its separation
-    .Navbar-Container {
+    //Distribute the links to the right
+    .Navigation-Container {
         grid-column: 2;
         justify-content: right;
-        margin-right: 16px;
+        padding: 0 16px;
+        @include DebugBorders(green);
         
         li {
             .Link {
@@ -58,30 +51,34 @@ header {
         }
     }
 
-    //Hide or show search textbox when the button is clicked
-    .Search-Container {
+    //Icons section
+    .Icons-Container {
         grid-column: 3;
-       
+        gap: 32px;
+        @include DebugBorders(green);
+
+        img {
+            height: 24px;         
+        }
+
         .Search-TextBox {
             display: none;
         }
 
         .Search-Icon {
-            height: 24px;         
             transform: translateY(2px);
             user-select: none;
             cursor: pointer;
         }
+
+        #Burger-Icon {
+            opacity: 0;
+        }
     }
+}
 
-    //Hide navigation bar on small screen resolution
-    @media (width < $MediaMinWidth) {    
-        .NavBar {
-            display: none;
-        }
-
-        #Burger-Button {
-            display: inline;
-        }
+@media screen and (max-width: $ScreenMinWidth) {
+    .Navigation-Container {
+        display: none;
     }
 }

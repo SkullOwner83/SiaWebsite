@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { BannerSlider } from "../Components/Slider";
 
-import ImgComputers from "../Images/Computers.jpg";
-import ImgSoftware from "../Images/Software.jpg";
-import ImgServers from "../Images/Servers.jpg";
-import ImgNetworks from "../Images/Networks.jpg";
+import ImgComputers from "../Images/Gallery/Computers.jpg";
+import ImgSoftware from "../Images/Gallery/Software.jpg";
+import ImgServers from "../Images/Gallery/Servers.jpg";
+import ImgNetworks from "../Images/Gallery/Networks.jpg";
 import ImgExperience from "../Images/Home/Experience.svg";
 import ImgClients from "../Images/Home/Clients.svg";
 import ImgRepairs from "../Images/Home/Repairs.svg";
@@ -23,6 +23,8 @@ import ImgNagoya from "../Images/Enterprises/Nagoya.png";
 import ImgVGA from "../Images/Enterprises/VGA.png";
 import ImgAminsa from "../Images/Enterprises/Aminsa.png"
 
+import { useFxParallax } from "../Functions";
+
 export const Home = () => {
   const SliderItems = [
     <p>Nuestro trabajo es ayudar a brindar servicios de calidad.</p>,
@@ -30,23 +32,7 @@ export const Home = () => {
     <p>¡Somos tu mejor aliado tecnológico!</p>,
   ]
 
-  //Background image parallax effecto when scrolling
-  useEffect(() => {
-    const handleScroll = () => {
-      const ImageContainer = document.querySelector('.Banner-Container');
-      const ScrollPosition = window.scrollY;
-      const ScrollVelocity = 0.5;
-  
-      //Adjust the background position to create the parallax effect
-      ImageContainer.style.backgroundPosition = `center ${-ScrollPosition * ScrollVelocity}px`;
-    };
-  
-    window.addEventListener('scroll', handleScroll);
-  
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
-  }, []);
+  useFxParallax(".Banner-Container");
 
   //HTML section
   return (
@@ -61,7 +47,7 @@ export const Home = () => {
         {/* Cards of the services that we offer */}
         <section className="Services">
           <h1>¿Qué servicios ofrecemos?</h1>
-          <div class="Grid-Gallery Card">
+          <div class="Grid-Wrap Image-Card">
             <div>
               <div className="Centered-Container">
                 <p>Cómputo</p>
@@ -86,7 +72,7 @@ export const Home = () => {
                   <li>Respaldo de información</li>
                   <li>Actualizaciones</li>
                 </ul>
-                <button className="Convencional-Button">ver más</button>
+                <Link className="Convencional-Button" to="/servicios">ver más</Link>
               </div>
               <img src={ImgSoftware}/>
             </div>
@@ -100,7 +86,7 @@ export const Home = () => {
                   <li>Migración y actualización</li>
                   <li>Virtualización</li>
                 </ul>
-                <button className="Convencional-Button">ver más</button>
+                <Link className="Convencional-Button" to="/servicios">ver más</Link>
               </div>
               <img src={ImgServers}/>
             </div>
@@ -114,7 +100,7 @@ export const Home = () => {
                   <li>Seguridad de redes</li>
                   <li>Auditoria y analisis</li>
                 </ul>
-                <button className="Convencional-Button">ver más</button>
+                <Link className="Convencional-Button" to="/servicios">ver más</Link>
               </div>
               <img src={ImgNetworks}/>
             </div>
@@ -127,7 +113,7 @@ export const Home = () => {
               <h2>¿Por qué elegirnos?</h2>
               <p>Nos esforzamos por brindar soluciones de la más alta calidad, respaldadas por conocimientos técnicos sólidos y experiencia demostrada. Además, abrazamos la innovación y adoptamos las últimas tecnologías para ofrecer soluciones avanzadas que impulsen el éxito de nuestros clientes.</p>
 
-              <div className="Grid-Gallery Graphics">
+              <div className="Grid-Wrap Graphics">
                 <div>
                   <img src={ImgExperience}/>
                   <p className="Title">+20 años</p>
@@ -160,17 +146,17 @@ export const Home = () => {
           <h3>Nuestros clientes</h3>
           {/* <p>Varias empresas y negocios del estado de aguascalientes, confian en nosotros.</p> */}
 
-          <div class="Grid-Gallery Graphics">     
-            <div><img src={ImgEcoSolution}/></div>     
-            <div><img src={ImgAgroestime}/></div>     
-            <div><img src={ImgCiasa}/></div>     
-            <div><img src={ImgMatute}/></div>     
-            <div><img src={ImgPassport}/></div>     
-            <div><img src={ImgMartinezCano}/></div>
-            <div><img src={ImgATIndustrial}/></div>
-            <div><img src={ImgNagoya}/></div>
-            <div><img src={ImgVGA}/></div>
-            <div><img src={ImgAminsa}/></div>
+          <div class="Flex-Wrap">     
+            <img src={ImgEcoSolution}/>
+            <img src={ImgAgroestime}/>
+            <img src={ImgCiasa}/>
+            <img src={ImgMatute}/>
+            <img src={ImgPassport}/>
+            <img src={ImgMartinezCano}/>
+            <img src={ImgATIndustrial}/>
+            <img src={ImgNagoya}/>
+            <img src={ImgVGA}/>
+            <img src={ImgAminsa}/>
           </div>
         </section>
       </main>

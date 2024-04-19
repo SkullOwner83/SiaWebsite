@@ -1,10 +1,17 @@
+//Class styles
 @import "./settings";
-@import "./base";
-@import "./components/_header";
-@import "./components/_footer";
-@import "./components/_Slider";
-@import "./pages/_homepage";
-@import "./pages/AboutUs";
-@import "./pages/_Contact";
-@import "./pages/_Services";
-@import "./global";
+@import "./Class/_Base";
+@import "./Class/_Behaviors";
+@import "./Class/_Effects";
+@import "./Class/_Appearance";
+
+//Components styles
+@import "./Components/_Header";
+@import "./Components/_Footer";
+@import "./Components/_Slider";
+
+//Pages styles
+@import "./Pages/_HomePage";
+@import "./Pages/_Services";
+@import "./Pages/AboutUs";
+@import "./Pages/_Contact";

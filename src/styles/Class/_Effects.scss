@@ -1,0 +1,25 @@
+//Effect to move up elements
+@mixin Fx-Up($Quantity: 20px, $Time: 0.3s) {
+    transition: $Time;
+
+    &:hover {
+        transform: translateY(-$Quantity);
+    }
+}
+
+.Fx-Up {
+    @include Fx-Up();
+}
+
+//Effect to reduce the element scale
+@mixin Fx-Compact($Scale: 0.9, $Time: 0.2s) {
+    transition: $Time;
+
+    &:hover {
+        transform: scale($Scale);
+    }
+}
+
+.Fx-Compact {
+    @include Fx-Compact();
+}

@@ -4,21 +4,24 @@
         background-image: url("../../Images/Banners/Home.jpg");
         position: relative;
 
+        //Contact button
         .Convencional-Button {
             width: 200px;
             margin-top: 0;       
             box-shadow: 0 0 50px black;
         }
 
+        //Text slider on bottom of the banner
         .Slider {
-            width: 100%;
-            background-color: rgba(black, 0.5);
-            backdrop-filter: blur(5px);            
-            padding: 16px 0; 
             position: absolute;
+            background-color: rgba(black, 0.5);
+            backdrop-filter: blur(5px);                        
+            
+            padding: 16px 0; 
             left: 0;
             bottom: 0;
             
+            //Appearance of slider items
             .Items-Container {
                 li {
                     padding: 0 20%;
@@ -29,10 +32,11 @@
                     height: 100%;
                     font-size: 1.3rem;
                     text-align: justify;
+                    color: white;
+                    
                     text-align-last: center;
                     justify-content: center;
                     align-items: center;
-                    color: white;
                 }
             }
 
@@ -42,14 +46,15 @@
         }
     }   
        
+    //What services we offer section
     .Services {
-        .Grid-Gallery{
+        .Grid-Wrap {
             margin-top: 64px;
     
             //Set styles to the first childs if gallery has a card class too
-            &.Card>div {
+            &.Image-Card>div {
                 position: relative;
-                border-radius: $MinBorderRadius;
+                border-radius: $MinRadius;
                 box-shadow: 0 0 30px $Shadow;
                 overflow: hidden;
                 transition: 0.5s;                                  
@@ -113,7 +118,7 @@
     }
 
     .WhyChooseUs {
-        .Grid-Gallery{
+        .Grid-Gallery {
             margin-top: 64px;
         }
     }
@@ -125,13 +130,8 @@
             color: $PrimaryColor;
         }
 
-        .Grid-Gallery {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            margin-top: 64px;
-
-            img {
-                width: 200px;
-            }
+        img {
+            width: 200px;
         }
     }
     

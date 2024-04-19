@@ -5,10 +5,6 @@ export const BannerSlider = (props) => {
   const [CurrenIndex, SetCurrentIndex] = useState(0);
   const SliderItems = props.List;
 
-  useEffect(() => {
-    console.log(CurrenIndex);
-  }, [CurrenIndex]);
-
   //Change the current index depending on what button was pressed
   const ScrollToItem = (Direction) => {
     if (Direction == "Previous") 
@@ -30,6 +26,7 @@ export const BannerSlider = (props) => {
     SetCurrentIndex(Index);
   }
 
+  //HTML section
   return (
     <div className="Slider">
       {/* The slider container will move according to its width multiplied by the index */}

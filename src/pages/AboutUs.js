@@ -1,10 +1,13 @@
 import React from "react";
+import { useFxParallax } from "../Functions";
 import ImgCommitment from "../Images/Commitment.svg";
 import ImgResponsability from "../Images/Responsability.svg";
 import ImgIntegrity from "../Images/Integrity.svg";
 import ImgInnovation from "../Images/Innovation.svg";
 
 export const AboutUs = () => {
+  useFxParallax(".Banner-Container", 0.3);
+
   //HTML section
   return (
     <div className="AboutUs-Page">
@@ -23,15 +26,15 @@ export const AboutUs = () => {
         </section>
 
         {/* Business identity section */}
-        <section>
+        <section className="Identity-Section">
           {/* Mission and vision */}
-          <div class="Grid-Gallery Cards">
-            <div>
+          <div class="Grid-Wrap">
+            <div className="Card-Style">
               <p className="Title">Misión</p>
               <p>Brindamos soluciones informáticas integrales y de calidad para potenciar la productividad y eficiencia de nuestros clientes.</p>
             </div>
 
-            <div>
+            <div className="Card-Style">
               <p className="Title">Vision</p>
               <p>Aspiramos a seguir siendo un referente confiable y ágil en el mundo de la informática, proporcionando servicios de vanguardia y manteniéndonos al día con las tendencias tecnológicas emergentes.</p>
             </div>
@@ -43,7 +46,7 @@ export const AboutUs = () => {
               <h2>Valores</h2>
             </div>
 
-            <div className="Grid-Gallery Graphics">
+            <div className="Flex-Wrap Graphics">
               <div>
                 <img src={ImgCommitment}/>
                 <p>Compromiso</p>

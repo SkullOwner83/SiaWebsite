@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Link, BrowserRouter } from "react-router-dom";
 import ImgSiaLogo from "../Images/sia-logo.svg";
-import ImgSearch from "../Images/search-icon.svg";
+import ImgSearch from "../Images/Icons/Search Icon.svg";
+import ImgBurger from "../Images/Icons/Burger Menu.svg";
 
 export const Header = () => {
     const NavbarLinks = ["INICIO", "SERVICIOS", "PRODUCTOS", "NOSOTROS", "CONTACTO"];
@@ -12,12 +13,11 @@ export const Header = () => {
       <Link to="/inicio">
         <div className="Logo-Container">
           <img src={ImgSiaLogo}/>
-          <p>SIA</p>
         </div>
       </Link>
 
       {/* Get each element from NavBar array and add it in navigation list menu */}          
-        <ul className="Navbar-Container Centered-Container Flex-Row">
+        <ul className="Navigation-Container Centered-Container Flex-Row">
             {
               NavbarLinks.map(element => {
                 return( <li key={element}>
@@ -28,7 +28,7 @@ export const Header = () => {
         </ul>
 
       {/* Search input text and button */}
-      <div class="Search-Container Centered-Container">
+      <div class="Icons-Container Centered-Container Flex-Row">
         <input type="text" className="Search-TextBox"/>
         <img src={ImgSearch} className="Search-Icon"/>
       </div>

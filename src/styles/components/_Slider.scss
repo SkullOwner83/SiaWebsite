@@ -3,6 +3,7 @@
     position: relative;
     overflow: hidden;
 
+    //Stacked items container
     .Items-Container {
         display: flex;
         width: inherit;
@@ -16,6 +17,7 @@
         }
     }
 
+    //Dot menu to navigate the slider
     .Dot-Menu {
         position: absolute;
         Left: 50%;
@@ -45,6 +47,7 @@
         }
     }
 
+    //Arrows to navigate to the slider one by one
     .Left-Arrow, .Right-Arrow {
         position: absolute;
         width: 60px;
